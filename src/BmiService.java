@@ -1,7 +1,12 @@
+import static java.lang.Math.pow;
+
 public class BmiService {
     public int calculate(int weightKg, double heightM) {
-        int index = (int) (weightKg / (heightM * heightM));
+
+        double doubleHeightM = Math.pow(heightM, 2);
+        int index = (int) (weightKg / doubleHeightM);
         return index;
     }
+
 
 }
